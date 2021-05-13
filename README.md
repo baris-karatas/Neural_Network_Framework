@@ -42,7 +42,7 @@ This framework currently has some features;
   ![50*2](https://user-images.githubusercontent.com/33378290/118197966-abf4c900-b458-11eb-987a-fd788f0a9484.png)
 
   
-   I reach around %96 percentage of accuracy in th test folder. it is very promising.
+   I reach around %96 percentage of accuracy in the test folder. it is very promising.
    
 # Notes
 I tried with different network sizes to see training speed and accuracy changing. We can create more sophisticated networks to reach higgest accuracy rate or we can decrease complication of network bu more we train our network with different data ce can reach higger accuracy rates.
