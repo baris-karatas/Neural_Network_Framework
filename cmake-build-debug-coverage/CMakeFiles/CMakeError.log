@@ -1,0 +1,64 @@
+The C compiler identification could not be found in "/home/blackstone/Desktop/NeuralNetwork/cmake-build-debug-coverage/CMakeFiles/3.19.2/CompilerIdC/CMakeCCompilerId.gcno"
+
+The CXX compiler identification could not be found in "/home/blackstone/Desktop/NeuralNetwork/cmake-build-debug-coverage/CMakeFiles/3.19.2/CompilerIdCXX/CMakeCXXCompilerId.gcno"
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/blackstone/Desktop/NeuralNetwork/cmake-build-debug-coverage/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_5959b/fast && /usr/bin/make  -f CMakeFiles/cmTC_5959b.dir/build.make CMakeFiles/cmTC_5959b.dir/build
+make[1]: Entering directory '/home/blackstone/Desktop/NeuralNetwork/cmake-build-debug-coverage/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5959b.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_5959b.dir/src.c.o -c /home/blackstone/Desktop/NeuralNetwork/cmake-build-debug-coverage/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_5959b
+/snap/clion/151/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5959b.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  CMakeFiles/cmTC_5959b.dir/src.c.o -o cmTC_5959b 
+/usr/bin/ld: CMakeFiles/cmTC_5959b.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x5e): undefined reference to `pthread_cancel'
+/usr/bin/ld: src.c:(.text+0x6f): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_5959b.dir/build.make:106: cmTC_5959b] Error 1
+make[1]: Leaving directory '/home/blackstone/Desktop/NeuralNetwork/cmake-build-debug-coverage/CMakeFiles/CMakeTmp'
+make: *** [Makefile:140: cmTC_5959b/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/blackstone/Desktop/NeuralNetwork/cmake-build-debug-coverage/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_774dc/fast && /usr/bin/make  -f CMakeFiles/cmTC_774dc.dir/build.make CMakeFiles/cmTC_774dc.dir/build
+make[1]: Entering directory '/home/blackstone/Desktop/NeuralNetwork/cmake-build-debug-coverage/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_774dc.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_774dc.dir/CheckFunctionExists.c.o -c /snap/clion/151/bin/cmake/linux/share/cmake-3.19/Modules/CheckFunctionExists.c
+Linking C executable cmTC_774dc
+/snap/clion/151/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_774dc.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_774dc.dir/CheckFunctionExists.c.o -o cmTC_774dc  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_774dc.dir/build.make:106: cmTC_774dc] Error 1
+make[1]: Leaving directory '/home/blackstone/Desktop/NeuralNetwork/cmake-build-debug-coverage/CMakeFiles/CMakeTmp'
+make: *** [Makefile:140: cmTC_774dc/fast] Error 2
+
+
+
