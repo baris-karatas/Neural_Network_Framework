@@ -1,4 +1,4 @@
-# NeuralNetwork Framework
+# Neural Network Framework
 I tried to crete a neural network framework that user can create multi-layer neural network easly.
 
 This framework currently has some features;
