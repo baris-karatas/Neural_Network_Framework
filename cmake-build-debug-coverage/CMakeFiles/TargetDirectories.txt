@@ -1,3 +1,0 @@
-/home/blackstone/Desktop/NeuralNetwork/cmake-build-debug-coverage/CMakeFiles/rebuild_cache.dir
-/home/blackstone/Desktop/NeuralNetwork/cmake-build-debug-coverage/CMakeFiles/edit_cache.dir
-/home/blackstone/Desktop/NeuralNetwork/cmake-build-debug-coverage/CMakeFiles/NeuralNetwork.dir
